@@ -59,6 +59,11 @@ RUN  mkdir -p /var/log/cron/ \
     	&& chmod 777 -R /var/lib/nginx/ \
     	&& chmod 777 -R /var/log/
 
+STOPSIGNAL SIGQUIT
+EXPOSE 8080 9000
+
+
+FROM builder
 WORKDIR /main
 RUN bash -c  /main/entrypoint.sh \
     && composer require \
@@ -67,10 +72,6 @@ RUN bash -c  /main/entrypoint.sh \
 STOPSIGNAL SIGQUIT
 EXPOSE 8080 9000
 RUN chmod 777 -R  /usr/share && touch -c /usr/share/nginx/logs/error.log
-
-FROM builder
-
-
 CMD ["supervisord", "-n"]
 
 
