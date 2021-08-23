@@ -22,8 +22,8 @@ ENV DEBIAN_FRONTEND=noninteractive \
   SOCKET=$DB_URL \
   SERVERNAME=api.ccfound.test \
   SERVERALIAS=www.api.ccfound.test \
-  DB_URL=mysql://root:4567@35.198.160.86/ccfound \
-  MAILER_DSN='smtp://6340f21044aba9:a613d114d259d6@smtp.mailtrap.io:2525?encryption=tls&auth_mode=login' \
+  DB_URL=$DB_URL \
+  MAILER_DSN=$MAILER_DNS \
   MESSENGER_TRANSPORT_DSN=doctrine://default
 COPY config/cron-task /etc/cron.d/crontask
 COPY config/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
