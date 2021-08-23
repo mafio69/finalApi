@@ -1,0 +1,11 @@
+# crontab -e
+
+SHELL=/bin/bash
+# MAILTO=mf1969@gmail.com
+PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin
+
+*/5 * * * *  echo http://127.0.0.1:$LOCAL_PORT >&1
+* * * * *  echo APP_ENV $APP_ENV >&1
+
+*/10 * * * * php /main/bin/console app:question:closer
+*/5 * * * * php /main/bin/console app:question:accepted
