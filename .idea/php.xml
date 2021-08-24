@@ -1,5 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/main/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/main/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/main/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/main/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/main/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/main/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/main/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/main/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/main/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/main/vendor/symfony/debug-bundle" />
+      <path value="$PROJECT_DIR$/main/vendor/symfony/dom-crawler" />
+      <path value="$PROJECT_DIR$/main/vendor/symfony/twig-bridge" />
+      <path value="$PROJECT_DIR$/main/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/main/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/main/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/main/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/main/vendor/symfony/browser-kit" />
+      <path value="$PROJECT_DIR$/main/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/main/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/main/vendor/phpunit/php-invoker" />
+      <path value="$PROJECT_DIR$/main/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/main/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/main/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/main/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/main/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/main/vendor/sebastian/code-unit" />
+      <path value="$PROJECT_DIR$/main/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/main/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/main/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/main/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/main/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/main/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/main/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/main/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/main/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/main/vendor/sebastian/cli-parser" />
+      <path value="$PROJECT_DIR$/main/vendor/sebastian/lines-of-code" />
+      <path value="$PROJECT_DIR$/main/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/main/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/main/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/main/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/main/vendor/sebastian/complexity" />
+      <path value="$PROJECT_DIR$/main/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/main/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/main/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/main/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/main/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/main/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/main/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/main/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/main/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/main/vendor/composer" />
+      <path value="$PROJECT_DIR$/main/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/main/vendor/myclabs/deep-copy" />
+    </include_path>
+  </component>
   <component name="PhpInterpreters">
     <interpreters>
       <interpreter id="2ebcdd83-2575-4fea-b520-6600da3ed008" name="mafio69/cc-backend:v0.01" home="docker://DATA" debugger_id="php.debugger.XDebug">
@@ -62,5 +120,13 @@
         </phpinfo>
       </interpreter>
     </phpInfoCache>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="8.0">
+    <option name="suggestChangeDefaultLanguageLevel" value="false" />
+  </component>
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/main/vendor/autoload.php" />
+    </phpunit_settings>
   </component>
 </project>

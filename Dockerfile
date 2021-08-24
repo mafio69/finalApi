@@ -6,24 +6,18 @@ ENV DEBIAN_FRONTEND=noninteractive \
   APP_NAME="CCFOUND" \
   DATABASE_NAME="ccfound" \
   DATABASE_USER="test" \
-  DATABASE_PASSWORD=1234 \
-  DATABASE_ROOT_PASSWORD=4567 \
   APP_ENV=dev \
   DEBUG=0 \
-  XDEBUG=1 \
-  LOCAL_PORT=8070 \
-  DATABASE_PORT=3306 \
+  XDEBUG=0 \
   EMAIL_USER=test \
-  EMAIL_PASSWORD=test \
-  EMAIL_HOST=mailtrap \
   VAR_DUMPER_SERVER=/main/var/log \
   DB_HOST_LOCAL=database \
   DB_HOST=localhost \
-  SOCKET=/cloudsql/ccfound-vpc-host-dev:europe-west3:dev-sql-mf \
+  SOCKET="${SOCKET}" \
   SERVERNAME=api.ccfound.test \
   SERVERALIAS=www.api.ccfound.test \
-  DB_URL=mysql://root:4567@35.198.160.86/ccfound \
-  MAILER_DSN='smtp://6340f21044aba9:a613d114d259d6@smtp.mailtrap.io:2525?encryption=tls&auth_mode=login' \
+  DB_URL=mysql://"${DB_LOGIN}":"${DB_LOGIN_PASS}"@"${GCLOUD_SQL}"/ccfound \
+  MAILER_DSN="${MAILER_DSN}" \
   MESSENGER_TRANSPORT_DSN=doctrine://default
 COPY config/cron-task /etc/cron.d/crontask
 COPY config/supervisord.conf /etc/supervisor/conf.d/supervisord.conf

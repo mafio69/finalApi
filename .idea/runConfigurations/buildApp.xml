@@ -2,9 +2,41 @@
   <configuration default="false" name="buildApp" type="docker-deploy" factoryName="dockerfile" singleton="false" server-name="Docker">
     <deployment type="dockerfile">
       <settings>
-        <option name="imageTag" value="mafio69/cc-backend:v0.01" />
+        <option name="imageTag" value="mafio69/cc-backend:v0.02" />
         <option name="buildKitEnabled" value="true" />
         <option name="containerName" value="cc-backend" />
+        <option name="envVars">
+          <list>
+            <DockerEnvVarImpl>
+              <option name="name" value="SOCKET" />
+              <option name="value" value="/cloudsql/ccfound-vpc-host-dev:europe-west3:dev-sql-mf" />
+            </DockerEnvVarImpl>
+            <DockerEnvVarImpl>
+              <option name="name" value="DB_LOGIN_PASS" />
+              <option name="value" value="4567" />
+            </DockerEnvVarImpl>
+            <DockerEnvVarImpl>
+              <option name="name" value="DB_LOGIN" />
+              <option name="value" value="root" />
+            </DockerEnvVarImpl>
+            <DockerEnvVarImpl>
+              <option name="name" value="MAILER_DSN" />
+              <option name="value" value="'smtp://6340f21044aba9:a613d114d259d6@smtp.mailtrap.io:2525?encryption=tls&amp;auth_mode=login'" />
+            </DockerEnvVarImpl>
+            <DockerEnvVarImpl>
+              <option name="name" value="GCLOUD_SQL" />
+              <option name="value" value="35.198.160.86" />
+            </DockerEnvVarImpl>
+            <DockerEnvVarImpl>
+              <option name="name" value="EMAIL_PASSWORD" />
+              <option name="value" value="test" />
+            </DockerEnvVarImpl>
+            <DockerEnvVarImpl>
+              <option name="name" value="EMAIL_HOST" />
+              <option name="value" value="mailtrap" />
+            </DockerEnvVarImpl>
+          </list>
+        </option>
         <option name="portBindings">
           <list>
             <DockerPortBindingImpl>
