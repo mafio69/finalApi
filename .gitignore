@@ -4,3 +4,4 @@
 *.txt
 /CID-cc-backend-last-step-MfuBBU.txt
 /secret/
+/.phpunit.result.cache

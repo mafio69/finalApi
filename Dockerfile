@@ -1,12 +1,11 @@
-FROM mafio69/phpdebian:v0.09
-# AS builder
+FROM mafio69/phpdebian:latest
 
 USER root
 WORKDIR /
 ENV DEBIAN_FRONTEND=noninteractive \
   APP_ENV=dev \
   DEBUG=0 \
-  XDEBUG=0
+  XDEBUG_AVAILABLE=${XDEBUG_AVAILABLE:-off}
 COPY config/cron-task /etc/cron.d/crontask
 COPY config/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY config/nginx/nginx.conf /etc/nginx/nginx.conf
@@ -30,7 +29,7 @@ RUN  mkdir -p /var/log/cron/ \
        && rm -f /etc/supervisor/conf.d/supervisord.conf \
        && touch -c /var/log/cron/cron.log \
        && touch -c /usr/share/nginx/logs/error.log
-COPY config/xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
+COPY config/xdebug-on.ini /usr/local/etc/php/conf.d/xdebug.ini
 COPY config/cron-task /etc/cron.d/crontask
 COPY config/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY config/supervisord-main.conf /etc/supervisord.conf
@@ -41,17 +40,6 @@ COPY --chown=docker:docker /main /main
 STOPSIGNAL SIGQUIT
 EXPOSE 8080 9000
 CMD ["supervisord", "-n"]
-
-#FROM builder
-#WORKDIR /main
-#RUN bash -c  /main/entrypoint.sh \
-#    && composer require \
-#    && composer dump-autoload \
-#    && chown docker:docker -R /main/vendor
-#STOPSIGNAL SIGQUIT
-#EXPOSE 8080 9000
-#RUN chmod 777 -R  /usr/share && touch -c /usr/share/nginx/logs/error.log
-#CMD ["supervisord", "-n"]
 
 
 
